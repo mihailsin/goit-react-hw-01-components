@@ -9,7 +9,6 @@ import statistics from './data/statistics.json';
 import user from './data/user.json';
 import friends from './data/friends.json';
 import transactions from './data/transactions.json';
-console.log(user);
 function App() {
   return (
     <Gallery>

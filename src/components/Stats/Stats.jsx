@@ -1,4 +1,5 @@
-import { Wrapper, Indicators, Item, Title } from './Stats.styled';
+import propTypes from 'prop-types';
+import { Wrapper, Indicators, Item, Title, Sector } from './Stats.styled';
 export const Stats = ({ title, stats }) => {
   return (
     <Wrapper>
@@ -9,11 +10,16 @@ export const Stats = ({ title, stats }) => {
           return (
             <Item key={id}>
               <span>{label}</span>
-              <span>{percentage}%</span>
+              <Sector>{percentage}%</Sector>
             </Item>
           );
         })}
       </Indicators>
     </Wrapper>
   );
+};
+
+Stats.propTypes = {
+  title: propTypes.string,
+  stats: propTypes.array.isRequired,
 };

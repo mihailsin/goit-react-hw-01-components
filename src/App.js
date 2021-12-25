@@ -1,13 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import { Gallery } from './components/Gallery/Gallery';
 import { Profile } from './components/Profile/Profile';
 import { Stats } from './components/Stats/Stats';
+import { FriendList } from './components/FriendList/FriendList';
+import { TransactionHistory } from './components/TransactionHistory/TransactionHistory';
 import statistics from './data/statistics.json';
 import user from './data/user.json';
+import friends from './data/friends.json';
+import transactions from './data/transactions.json';
 console.log(user);
 function App() {
   return (
-    <div>
+    <Gallery>
       <Profile
         avatar={user.avatar}
         username={user.username}
@@ -18,7 +23,9 @@ function App() {
         likes={user.stats.likes}
       />
       <Stats title="UPLOAD STATS" stats={statistics} />
-    </div>
+      <FriendList data={friends} />
+      <TransactionHistory data={transactions} />
+    </Gallery>
   );
 }
 

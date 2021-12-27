@@ -17,7 +17,5 @@ export const FriendList = ({ data }) => {
 };
 
 FriendList.propTypes = {
-  avatar: propTypes.string,
-  name: propTypes.string,
-  isOnline: propTypes.bool,
+  data: propTypes.array,
 };

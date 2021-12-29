@@ -1,9 +1,6 @@
 import { element } from 'prop-types';
 import styled from 'styled-components';
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-
+import { getRandomHexColor } from '../../utils/hexColorGenerator';
 export const Wrapper = styled.div`
   margin-top: auto;
   margin-bottom: auto;

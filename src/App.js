@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Gallery } from './components/Gallery/Gallery';
 import { Profile } from './components/Profile/Profile';
@@ -17,9 +16,7 @@ function App() {
         username={user.username}
         tag={user.tag}
         location={user.location}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
+        stats={user.stats}
       />
       <Stats title="UPLOAD STATS" stats={statistics} />
       <FriendList data={friends} />

@@ -10,15 +10,7 @@ import {
   Info,
 } from './Profile.styled';
 
-export const Profile = ({
-  username,
-  tag,
-  location,
-  avatar,
-  followers,
-  views,
-  likes,
-}) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <Card>
       <Thumb>
@@ -31,15 +23,15 @@ export const Profile = ({
       <Stats>
         <Item>
           <Title>Followers</Title>
-          <span>{followers}</span>
+          <span>{stats.followers}</span>
         </Item>
         <Item>
           <Title>Views</Title>
-          <span>{views}</span>
+          <span>{stats.views}</span>
         </Item>
         <Item>
           <Title>Likes</Title>
-          <span>{likes}</span>
+          <span>{stats.likes}</span>
         </Item>
       </Stats>
     </Card>
@@ -51,7 +43,5 @@ Profile.propTypes = {
   tag: propTypes.string.isRequired,
   location: propTypes.string.isRequired,
   avatar: propTypes.string.isRequired,
-  followers: propTypes.number.isRequired,
-  views: propTypes.number.isRequired,
-  likes: propTypes.number.isRequired,
+  stats: propTypes.object.isRequired,
 };
